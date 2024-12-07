@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Pavo Real Albino</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1 class="titulo">Guacamayo azul y amarillo</h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Menú <i class="fas fa-bars"></i></a>
+                <ul class="submenu">
+                    <li><a href="index.html">Inicio </a></li>
+                    <li><a href="sobre.html">Sobre Tierras Blancas</a></li>
+                    <li><a href="historia-pavo-real-albino.html">Pavo real Albino</a></li>
+                    <li><a href="gualcamayo-azul-y-amarillo.html">Gualcamayo Azul y Amarillo</a></li>
+                    <li><a href="caraya.html">Mono Caraya</a></li>
+                    <li><a href="galeria.html"> Galeria de Imagenes</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <h2>El Gualcamayo Azul y Amarillo</h2>
+    <p>
+    El guacamayo azul y amarillo conocido por su nombre cientifico (<em>Ara ararauna</em>), es una especie de ave psitaciforme de la familia Psittacidae que es endémica de América del Sur. 
+    Su área de distribución comprende desde Panamá hasta el noreste de Argentina pasando por toda la cuenca amazónica. 
+    En Costa Rica este guacamayo está extinto en libertad haciendo que ya no forme parte de la fauna natural. 
+    En cautividad se reproducen fácilmente; en libertad viven en grupos de veinticinco a treinta ejemplares. 
+    Este guacamayo es apreciado como mascota, y por este mismo motivo su población salvaje decayó, sin embargo, este guacamayo sigue clasificado como en preocupación menor.
+    </p>
+</section>
+
+<section>
+    <h2>Alimentación</h2>
+    <ul>
+        <li>Semillas</li>
+        <li>Frutos Secos</li>
+        <li>Grano</li>
+        <li>Fruta Fresca</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Hábitat</h2>
+    <p>
+        Vive principalmente en Bosques cercanos a los cauces de los ríos. 
+        Siempre hacen sus nidos en arboles huecos que están siempre en una altura elevada y solamente suelen bajar a tomar agua. 
+        Vive en Colombia, Venezuela, Paraguay, Perú, Panamá, Brasil y Panamá. 
+    </p>
+</section>
+
+<section>
+    <h2>Estilo de vida</h2>
+    <p>
+        Los Guacamayos azul y amarillo forman grupos muy unidos en Silvestre.
+        Son gregarios y pasarán tiempo juntos con otros de su bandada, jugando, bañándose y cazando fruta comestible en el bosque.
+    </p>
+</section>
+
+<section>
+    <h2>Reproducción</h2>
+    <p>
+        Se reproducen entre agosto y enero.
+        Hace sus nidos en huecos de árboles, colocando de 2 a 3 huevos que la hembra incuba por 28 días.
+        El macho alimenta a la hembra y protege el nido
+    </p>
+</section>
+<section>
+    <h2>Longevidad</h2>
+    <p>
+        Su esperanza de vida varia de 30 a 50 años. Pero si están
+        en cautiverio tienen una probabilidad de vida de 75 años porque al estar en mejor cuidado y no estar en peligro de otros animales tienen más esperanza de vida.
+    </p>
+</section>
+<section>
+    <h2>Galería de Imágenes y Videos</h2>
+    <div class="galeria">
+        <figure class="img" id="img1">
+            <img src="http://localhost/tierrasblancas/asset/gualcamayo/azul 1.jpg" width="260" height="300" alt="Gualcamayo Azul y Amarillo 1">
+        </figure>
+        <figure class="img" id="img2">
+            <img src="http://localhost/tierrasblancas/asset/gualcamayo/azul 2.jpg" width="260" height="300" alt="Gualcamayo Azul y Amarillo 2">
+        </figure>
+        <figure class="img" id="img3">
+            <img src="http://localhost/tierrasblancas/asset/gualcamayo/azul 3.jpg" width="260" height="300" alt="Gualcamayo Azul y Amarillo 3">
+        </figure>
+        <figure class="img" id="img3">
+            <img src="http://localhost/tierrasblancas/asset/gualcamayo/azul 4.jpg" width="260" height="300" alt="Gualcamayo Azul y Amarillo 4">
+        </figure>
+    </div>
+
+    <!-- Vista previa con zoom y flechas de navegación -->
+    <div class="vista-previa">
+        <div class="navegacion">
+            <button class="flecha izquierda">←</button>
+            <button class="flecha derecha">→</button>
+        </div>
+        <div class="contenido">
+            <figure class="img-zoom">
+                <img src="http://localhost/tierrasblancas/asset/gualcamayo/azul1.jpg" alt="Vista previa de Gualcamayo Azul y Amarillo ">
+            </figure>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>
+        <a href="index.html" target="_top" class="link-hover">Volver al Inicio</a>
+    </h2>
+</section>
+<footer>
+    <p>&copy; 2024 Tierras Blancas Salvaje. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const vistaPrevia = document.querySelector('.vista-previa');
+    const imgZoom = document.querySelector('.img-zoom img');
+    const imagenes = document.querySelectorAll('.galeria .img img, .galeria .img video');
+    const flechaIzquierda = document.querySelector('.flecha.izquierda');
+    const flechaDerecha = document.querySelector('.flecha.derecha');
+
+    let indiceActual = 0;
+    const elementos = Array.from(imagenes);
+
+    // Mostrar vista previa de la imagen al hacer clic
+    imagenes.forEach((imagen, index) => {
+        imagen.addEventListener('click', () => {
+            vistaPrevia.style.display = 'flex'; // Muestra la vista previa
+            imgZoom.src = imagen.src; // Cambia la imagen de vista previa
+            if (imagen.tagName === 'VIDEO') {
+                imgZoom.replaceWith(imagen.cloneNode(true)); // Si es un video, lo muestra en la vista previa
+            }
+            indiceActual = index; // Actualiza el índice actual
+        });
+    });
+
+    // Flecha izquierda (mover a la imagen anterior)
+    flechaIzquierda.addEventListener('click', () => {
+        indiceActual = (indiceActual - 1 + elementos.length) % elementos.length; // Cicla hacia la imagen anterior
+        const nuevoElemento = elementos[indiceActual];
+        if (nuevoElemento.tagName === 'VIDEO') {
+            imgZoom.replaceWith(nuevoElemento.cloneNode(true));
+        } else {
+            imgZoom.src = nuevoElemento.src;
+        }
+    });
+
+    // Flecha derecha (mover a la imagen siguiente)
+    flechaDerecha.addEventListener('click', () => {
+        indiceActual = (indiceActual + 1) % elementos.length; // Cicla hacia la imagen siguiente
+        const nuevoElemento = elementos[indiceActual];
+        if (nuevoElemento.tagName === 'VIDEO') {
+            imgZoom.replaceWith(nuevoElemento.cloneNode(true));
+        } else {
+            imgZoom.src = nuevoElemento.src;
+        }
+    });
+
+    // Cerrar vista previa al hacer clic fuera de la imagen
+    vistaPrevia.addEventListener('click', (e) => {
+        if (e.target === vistaPrevia) {
+            vistaPrevia.style.display = 'none'; // Oculta la vista previa
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Costo de Entradas</title>
+    <link rel="stylesheet" href="stylesForm.css">
+</head>
+<body>
+    <h1>Calculadora de Costo de Entradas</h1>
+    <form action="calcular_costo.php" method="POST">
+        <label for="cantidad">Cantidad de personas:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+        <label for="dia">Selecciona el tipo de día:</label>
+        <select id="dia" name="dia" required>
+            <option value="entre_semana">Entre Semana</option>
+            <option value="fin_de_semana">Fin de Semana</option>
+        </select>
+
+        <label for="fecha">Selecciona la fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
